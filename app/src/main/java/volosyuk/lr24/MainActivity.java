@@ -16,10 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> listView, View itemView, int position, long id) {
-                if (position == 0) {
                     Intent intent = new Intent(MainActivity.this, DrinkCategoryActivity.class);
+                    intent.putExtra("type", position);
                     startActivity(intent);
-                }
             }
         };
         ListView listView = (ListView) findViewById(R.id.list_options);
