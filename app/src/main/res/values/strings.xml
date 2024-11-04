@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LR24</string>
+    <string name="app_name">LR32</string>
     <string name="coffee_house">Логотип кофейни</string>
     <string-array name="options">
         <item>Напитки</item>

@@ -12,17 +12,18 @@ import android.widget.ListView;
 public class DrinkCategoryActivity extends AppCompatActivity {
 
     public static final String TYPE = "type";
+    private CoffeeDatabaseHelper coffeeDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink_category);
-
+        coffeeDatabaseHelper = new CoffeeDatabaseHelper(this);
         int type = getIntent().getIntExtra(TYPE, 0);
 
         switch (type){
             case 0:
-                ArrayAdapter<Drink> drinkAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Drink.drinks);
+                ArrayAdapter<Drink> drinkAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, coffeeDatabaseHelper.getDrinks());
                 ListView listDrinks = (ListView) findViewById(R.id.list_drinks);
                 listDrinks.setAdapter(drinkAdapter);
 

@@ -9,7 +9,7 @@ public class Drink {
             new Drink("Капучино", "Кофейный напиток итальянской кухни на основе эспрессо с добавлением в него подогретого вспененного молока", R.drawable.cappuccino),
             new Drink("Raf", "Кофейный напиток, готовится путём добавления нагретых паром сливок с небольшим количеством пены в одиночную порцию эспрессо", R.drawable.raf)};
 
-    private Drink(String name, String description, int imageResourceId) {
+    public Drink(String name, String description, int imageResourceId) {
         this.name = name;
         this.description = description;
         this.imageResourceId = imageResourceId;
